@@ -2609,7 +2609,7 @@ ArduinoÂ® Light Theme - Stefania Mellai <s.mellai@arduino.cc>
     	};
     }
 
-    // (34:2) <LogoutButton>
+    // (41:2) <LogoutButton>
     function create_default_slot_2(ctx) {
     	let t;
 
@@ -2626,7 +2626,7 @@ ArduinoÂ® Light Theme - Stefania Mellai <s.mellai@arduino.cc>
     	};
     }
 
-    // (35:2) <RefreshTokenButton>
+    // (42:2) <RefreshTokenButton>
     function create_default_slot_1(ctx) {
     	let t;
 
@@ -2643,32 +2643,27 @@ ArduinoÂ® Light Theme - Stefania Mellai <s.mellai@arduino.cc>
     	};
     }
 
-    // (68:2) {#if isAuthenticated == true}
+    // (44:2) {#if show_game}
     function create_if_block(ctx) {
-    	let iframe;
-    	let iframe_src_value;
+    	let div;
 
     	return {
     		c() {
-    			iframe = element("iframe");
-    			attr(iframe, "title", "embedded game");
-    			if (iframe.src !== (iframe_src_value = "http://wanted5games.com/games/html5/jewels-connect-en-s-iga-cloud/index.html?pub=10")) attr(iframe, "src", iframe_src_value);
-    			attr(iframe, "name", "cloudgames-com");
-    			attr(iframe, "width", "null");
-    			attr(iframe, "height", "null");
-    			attr(iframe, "frameborder", "0");
-    			attr(iframe, "scrolling", "no");
+    			div = element("div");
+
+    			div.innerHTML = `<iframe title="embedded game" src="https://hextris.io/" name="hextris" width="800" height="600" frameborder="0" scrolling="no"></iframe> 
+				<a href="https://hextris.io/">hextris.io</a>`;
     		},
     		m(target, anchor) {
-    			insert(target, iframe, anchor);
+    			insert(target, div, anchor);
     		},
     		d(detaching) {
-    			if (detaching) detach(iframe);
+    			if (detaching) detach(div);
     		}
     	};
     }
 
-    // (27:1) <OidcContext   issuer="https://nft-login.chriamue.net"   client_id="0x420d2a6E87D87992EB01e5BFe762B3F437dBfD85"   redirect_uri="https://nft-login.github.io/svelte-oidc/"   post_logout_redirect_uri="https://nft-login.github.io/svelte-oidc/"  >
+    // (34:1) <OidcContext   issuer="https://nft-login.chriamue.net"   client_id="0x420d2a6E87D87992EB01e5BFe762B3F437dBfD85"   redirect_uri="https://nft-login.github.io/svelte-oidc/"   post_logout_redirect_uri="https://nft-login.github.io/svelte-oidc/"  >
     function create_default_slot(ctx) {
     	let loginbutton;
     	let t0;
@@ -2676,41 +2671,40 @@ ArduinoÂ® Light Theme - Stefania Mellai <s.mellai@arduino.cc>
     	let t1;
     	let refreshtokenbutton;
     	let t2;
+    	let t3;
     	let table;
     	let thead;
-    	let t5;
+    	let t6;
     	let tbody;
     	let tr1;
     	let td0;
     	let td1;
-    	let t7;
     	let t8;
+    	let t9;
     	let tr2;
     	let td2;
     	let td3;
-    	let t10;
     	let t11;
+    	let t12;
     	let tr3;
     	let td4;
     	let td5;
-    	let t13;
     	let t14;
+    	let t15;
     	let tr4;
     	let td6;
     	let td7;
-    	let t16;
     	let t17;
+    	let t18;
     	let tr5;
     	let td8;
     	let td9;
     	let highlight;
-    	let t19;
+    	let t20;
     	let tr6;
     	let td10;
     	let td11;
-    	let t21;
     	let t22;
-    	let if_block_anchor;
     	let current;
 
     	loginbutton = new LoginButton({
@@ -2734,14 +2728,14 @@ ArduinoÂ® Light Theme - Stefania Mellai <s.mellai@arduino.cc>
     			}
     		});
 
+    	let if_block = /*show_game*/ ctx[0] && create_if_block();
+
     	highlight = new Highlight({
     			props: {
     				language: json$1,
-    				code: JSON.stringify(/*$userInfo*/ ctx[4], null, 2) || ""
+    				code: JSON.stringify(/*$userInfo*/ ctx[5], null, 2) || ""
     			}
     		});
-
-    	let if_block = isAuthenticated == true && create_if_block();
 
     	return {
     		c() {
@@ -2751,49 +2745,48 @@ ArduinoÂ® Light Theme - Stefania Mellai <s.mellai@arduino.cc>
     			t1 = space();
     			create_component(refreshtokenbutton.$$.fragment);
     			t2 = space();
+    			if (if_block) if_block.c();
+    			t3 = space();
     			table = element("table");
     			thead = element("thead");
     			thead.innerHTML = `<tr><th style="width: 20%;">store</th><th style="width: 80%;">value</th></tr>`;
-    			t5 = space();
+    			t6 = space();
     			tbody = element("tbody");
     			tr1 = element("tr");
     			td0 = element("td");
     			td0.textContent = "isLoading";
     			td1 = element("td");
-    			t7 = text(/*$isLoading*/ ctx[0]);
-    			t8 = space();
+    			t8 = text(/*$isLoading*/ ctx[1]);
+    			t9 = space();
     			tr2 = element("tr");
     			td2 = element("td");
     			td2.textContent = "isAuthenticated";
     			td3 = element("td");
-    			t10 = text(/*$isAuthenticated*/ ctx[1]);
-    			t11 = space();
+    			t11 = text(/*$isAuthenticated*/ ctx[2]);
+    			t12 = space();
     			tr3 = element("tr");
     			td4 = element("td");
     			td4.textContent = "accessToken";
     			td5 = element("td");
-    			t13 = text(/*$accessToken*/ ctx[2]);
-    			t14 = space();
+    			t14 = text(/*$accessToken*/ ctx[3]);
+    			t15 = space();
     			tr4 = element("tr");
     			td6 = element("td");
     			td6.textContent = "idToken";
     			td7 = element("td");
-    			t16 = text(/*$idToken*/ ctx[3]);
-    			t17 = space();
+    			t17 = text(/*$idToken*/ ctx[4]);
+    			t18 = space();
     			tr5 = element("tr");
     			td8 = element("td");
     			td8.textContent = "userInfo";
     			td9 = element("td");
     			create_component(highlight.$$.fragment);
-    			t19 = space();
+    			t20 = space();
     			tr6 = element("tr");
     			td10 = element("td");
     			td10.textContent = "authError";
     			td11 = element("td");
-    			t21 = text(/*$authError*/ ctx[5]);
-    			t22 = space();
-    			if (if_block) if_block.c();
-    			if_block_anchor = empty();
+    			t22 = text(/*$authError*/ ctx[6]);
     			set_style(td5, "word-break", "break-all");
     			set_style(td7, "word-break", "break-all");
     		},
@@ -2804,74 +2797,85 @@ ArduinoÂ® Light Theme - Stefania Mellai <s.mellai@arduino.cc>
     			insert(target, t1, anchor);
     			mount_component(refreshtokenbutton, target, anchor);
     			insert(target, t2, anchor);
+    			if (if_block) if_block.m(target, anchor);
+    			insert(target, t3, anchor);
     			insert(target, table, anchor);
     			append(table, thead);
-    			append(table, t5);
+    			append(table, t6);
     			append(table, tbody);
     			append(tbody, tr1);
     			append(tr1, td0);
     			append(tr1, td1);
-    			append(td1, t7);
-    			append(tbody, t8);
+    			append(td1, t8);
+    			append(tbody, t9);
     			append(tbody, tr2);
     			append(tr2, td2);
     			append(tr2, td3);
-    			append(td3, t10);
-    			append(tbody, t11);
+    			append(td3, t11);
+    			append(tbody, t12);
     			append(tbody, tr3);
     			append(tr3, td4);
     			append(tr3, td5);
-    			append(td5, t13);
-    			append(tbody, t14);
+    			append(td5, t14);
+    			append(tbody, t15);
     			append(tbody, tr4);
     			append(tr4, td6);
     			append(tr4, td7);
-    			append(td7, t16);
-    			append(tbody, t17);
+    			append(td7, t17);
+    			append(tbody, t18);
     			append(tbody, tr5);
     			append(tr5, td8);
     			append(tr5, td9);
     			mount_component(highlight, td9, null);
-    			append(tbody, t19);
+    			append(tbody, t20);
     			append(tbody, tr6);
     			append(tr6, td10);
     			append(tr6, td11);
-    			append(td11, t21);
-    			insert(target, t22, anchor);
-    			if (if_block) if_block.m(target, anchor);
-    			insert(target, if_block_anchor, anchor);
+    			append(td11, t22);
     			current = true;
     		},
     		p(ctx, dirty) {
     			const loginbutton_changes = {};
 
-    			if (dirty & /*$$scope*/ 64) {
+    			if (dirty & /*$$scope*/ 256) {
     				loginbutton_changes.$$scope = { dirty, ctx };
     			}
 
     			loginbutton.$set(loginbutton_changes);
     			const logoutbutton_changes = {};
 
-    			if (dirty & /*$$scope*/ 64) {
+    			if (dirty & /*$$scope*/ 256) {
     				logoutbutton_changes.$$scope = { dirty, ctx };
     			}
 
     			logoutbutton.$set(logoutbutton_changes);
     			const refreshtokenbutton_changes = {};
 
-    			if (dirty & /*$$scope*/ 64) {
+    			if (dirty & /*$$scope*/ 256) {
     				refreshtokenbutton_changes.$$scope = { dirty, ctx };
     			}
 
     			refreshtokenbutton.$set(refreshtokenbutton_changes);
-    			if (!current || dirty & /*$isLoading*/ 1) set_data(t7, /*$isLoading*/ ctx[0]);
-    			if (!current || dirty & /*$isAuthenticated*/ 2) set_data(t10, /*$isAuthenticated*/ ctx[1]);
-    			if (!current || dirty & /*$accessToken*/ 4) set_data(t13, /*$accessToken*/ ctx[2]);
-    			if (!current || dirty & /*$idToken*/ 8) set_data(t16, /*$idToken*/ ctx[3]);
+
+    			if (/*show_game*/ ctx[0]) {
+    				if (if_block) ; else {
+    					if_block = create_if_block();
+    					if_block.c();
+    					if_block.m(t3.parentNode, t3);
+    				}
+    			} else if (if_block) {
+    				if_block.d(1);
+    				if_block = null;
+    			}
+
+    			if (!current || dirty & /*$isLoading*/ 2) set_data(t8, /*$isLoading*/ ctx[1]);
+    			if (!current || dirty & /*$isAuthenticated*/ 4) set_data(t11, /*$isAuthenticated*/ ctx[2]);
+    			if (!current || dirty & /*$accessToken*/ 8) set_data(t14, /*$accessToken*/ ctx[3]);
+    			if (!current || dirty & /*$idToken*/ 16) set_data(t17, /*$idToken*/ ctx[4]);
     			const highlight_changes = {};
-    			if (dirty & /*$userInfo*/ 16) highlight_changes.code = JSON.stringify(/*$userInfo*/ ctx[4], null, 2) || "";
+    			if (dirty & /*$userInfo*/ 32) highlight_changes.code = JSON.stringify(/*$userInfo*/ ctx[5], null, 2) || "";
     			highlight.$set(highlight_changes);
-    			if (!current || dirty & /*$authError*/ 32) set_data(t21, /*$authError*/ ctx[5]);
+    			if (!current || dirty & /*$authError*/ 64) set_data(t22, /*$authError*/ ctx[6]);
     		},
     		i(local) {
     			if (current) return;
@@ -2895,11 +2899,10 @@ ArduinoÂ® Light Theme - Stefania Mellai <s.mellai@arduino.cc>
     			if (detaching) detach(t1);
     			destroy_component(refreshtokenbutton, detaching);
     			if (detaching) detach(t2);
+    			if (if_block) if_block.d(detaching);
+    			if (detaching) detach(t3);
     			if (detaching) detach(table);
     			destroy_component(highlight);
-    			if (detaching) detach(t22);
-    			if (if_block) if_block.d(detaching);
-    			if (detaching) detach(if_block_anchor);
     		}
     	};
     }
@@ -2943,7 +2946,7 @@ ArduinoÂ® Light Theme - Stefania Mellai <s.mellai@arduino.cc>
     		p(ctx, [dirty]) {
     			const oidccontext_changes = {};
 
-    			if (dirty & /*$$scope, $authError, $userInfo, $idToken, $accessToken, $isAuthenticated, $isLoading*/ 127) {
+    			if (dirty & /*$$scope, $authError, $userInfo, $idToken, $accessToken, $isAuthenticated, $isLoading, show_game*/ 383) {
     				oidccontext_changes.$$scope = { dirty, ctx };
     			}
 
@@ -2975,13 +2978,28 @@ ArduinoÂ® Light Theme - Stefania Mellai <s.mellai@arduino.cc>
     	let $idToken;
     	let $userInfo;
     	let $authError;
-    	component_subscribe($$self, isLoading, $$value => $$invalidate(0, $isLoading = $$value));
-    	component_subscribe($$self, isAuthenticated, $$value => $$invalidate(1, $isAuthenticated = $$value));
-    	component_subscribe($$self, accessToken, $$value => $$invalidate(2, $accessToken = $$value));
-    	component_subscribe($$self, idToken, $$value => $$invalidate(3, $idToken = $$value));
-    	component_subscribe($$self, userInfo, $$value => $$invalidate(4, $userInfo = $$value));
-    	component_subscribe($$self, authError, $$value => $$invalidate(5, $authError = $$value));
-    	return [$isLoading, $isAuthenticated, $accessToken, $idToken, $userInfo, $authError];
+    	component_subscribe($$self, isLoading, $$value => $$invalidate(1, $isLoading = $$value));
+    	component_subscribe($$self, isAuthenticated, $$value => $$invalidate(2, $isAuthenticated = $$value));
+    	component_subscribe($$self, accessToken, $$value => $$invalidate(3, $accessToken = $$value));
+    	component_subscribe($$self, idToken, $$value => $$invalidate(4, $idToken = $$value));
+    	component_subscribe($$self, userInfo, $$value => $$invalidate(5, $userInfo = $$value));
+    	component_subscribe($$self, authError, $$value => $$invalidate(6, $authError = $$value));
+    	console.log(isAuthenticated);
+    	let show_game;
+
+    	isAuthenticated.subscribe(value => {
+    		$$invalidate(0, show_game = value);
+    	});
+
+    	return [
+    		show_game,
+    		$isLoading,
+    		$isAuthenticated,
+    		$accessToken,
+    		$idToken,
+    		$userInfo,
+    		$authError
+    	];
     }
 
     class App extends SvelteComponent {
