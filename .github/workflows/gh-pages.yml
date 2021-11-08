@@ -6,6 +6,11 @@ jobs:
   build_web_app:
     name: Web App
     runs-on: ubuntu-latest
+    env:
+      OIDC_ISSUER: https://nft-login.chriamue.net
+      OIDC_CLIENT_ID: "0x420d2a6E87D87992EB01e5BFe762B3F437dBfD85"
+      OIDC_REDIRECT_URI: https://nft-login.github.io/svelte-oidc/
+      OIDC_POST_LOGOUT_REDIRECT_URI: https://nft-login.github.io/svelte-oidc/
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js
