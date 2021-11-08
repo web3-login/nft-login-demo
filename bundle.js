@@ -2643,7 +2643,7 @@ ArduinoÂ® Light Theme - Stefania Mellai <s.mellai@arduino.cc>
     	};
     }
 
-    // (27:0) <OidcContext   issuer="https://dev-hvw40i79.auth0.com"   client_id="5m4i3ZD9M3NqX4qQsB0nsBmCXb6OXBN2"   redirect_uri="https://darrelopry.com/svelte-oidc"   post_logout_redirect_uri="https://darrelopry.com/svelte-oidc" >
+    // (27:0) <OidcContext   issuer="https://nft-login.chriamue.net"   client_id="0x420d2a6E87D87992EB01e5BFe762B3F437dBfD85"   redirect_uri="https://nft-login.github.io/svelte-oidc/"   post_logout_redirect_uri="https://nft-login.github.io/svelte-oidc/" >
     function create_default_slot(ctx) {
     	let loginbutton;
     	let t0;
@@ -2876,10 +2876,10 @@ ArduinoÂ® Light Theme - Stefania Mellai <s.mellai@arduino.cc>
 
     	oidccontext = new OidcContext({
     			props: {
-    				issuer: "https://dev-hvw40i79.auth0.com",
-    				client_id: "5m4i3ZD9M3NqX4qQsB0nsBmCXb6OXBN2",
-    				redirect_uri: "https://darrelopry.com/svelte-oidc",
-    				post_logout_redirect_uri: "https://darrelopry.com/svelte-oidc",
+    				issuer: "https://nft-login.chriamue.net",
+    				client_id: "0x420d2a6E87D87992EB01e5BFe762B3F437dBfD85",
+    				redirect_uri: "https://nft-login.github.io/svelte-oidc/",
+    				post_logout_redirect_uri: "https://nft-login.github.io/svelte-oidc/",
     				$$slots: { default: [create_default_slot] },
     				$$scope: { ctx }
     			}
