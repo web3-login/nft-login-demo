@@ -25,7 +25,7 @@ jobs:
       - name: Build App for okt
         env:
           OIDC_ISSUER: https://nft-login.chriamue.net/okt/
-          OIDC_CLIENT_ID: "0x886B6781CD7dF75d8440Aba84216b2671AEFf9A4"
+          OIDC_CLIENT_ID: "0xBa4e569A5156C00348B89653968c2C294f80E151"
           OIDC_REDIRECT_URI: https://nft-login.github.io/svelte-oidc/okt/
           OIDC_POST_LOGOUT_REDIRECT_URI: https://nft-login.github.io/svelte-oidc/okt/
         run: PUBLIC_URL=/svelte-oidc/okt npm run showcase:build && cp -R public gh-public/okt
