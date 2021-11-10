@@ -32,7 +32,7 @@ jobs:
       - name: Build App for heco
         env:
           OIDC_ISSUER: https://nft-login.chriamue.net/heco/
-          OIDC_CLIENT_ID: "0x51320F31d30c56c8107D82b4C67C5EdDfCa88bc2"
+          OIDC_CLIENT_ID: "0xBa4e569A5156C00348B89653968c2C294f80E151"
           OIDC_REDIRECT_URI: https://nft-login.github.io/svelte-oidc/heco/
           OIDC_POST_LOGOUT_REDIRECT_URI: https://nft-login.github.io/svelte-oidc/heco/
         run: PUBLIC_URL=/svelte-oidc/heco npm run showcase:build && cp -R public gh-public/heco
