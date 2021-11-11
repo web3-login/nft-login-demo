@@ -9,8 +9,8 @@ jobs:
     env:
       OIDC_ISSUER: https://nft-login.chriamue.net
       OIDC_CLIENT_ID: "0x420d2a6E87D87992EB01e5BFe762B3F437dBfD85"
-      OIDC_REDIRECT_URI: https://nft-login.github.io/svelte-oidc/
-      OIDC_POST_LOGOUT_REDIRECT_URI: https://nft-login.github.io/svelte-oidc/
+      OIDC_REDIRECT_URI: https://nft-login.github.io/nft-login-demo/
+      OIDC_POST_LOGOUT_REDIRECT_URI: https://nft-login.github.io/nft-login-demo/
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js
@@ -20,29 +20,36 @@ jobs:
       - name: Install node dependencies
         run: npm install
       - name: Build App
-        run: PUBLIC_URL=/svelte-oidc npm run showcase:build && cp -R public gh-public
+        run: PUBLIC_URL=/nft-login-demo npm run showcase:build && cp -R public gh-public
 
+      - name: Build App for kovan
+        env:
+          OIDC_ISSUER: https://nft-login.chriamue.net/kovan/
+          OIDC_CLIENT_ID: "0x420d2a6E87D87992EB01e5BFe762B3F437dBfD85"
+          OIDC_REDIRECT_URI: https://nft-login.github.io/nft-login-demo/kovan/
+          OIDC_POST_LOGOUT_REDIRECT_URI: https://nft-login.github.io/nft-login-demo/kovan/
+        run: PUBLIC_URL=/nft-login-demo/kovan npm run showcase:build && cp -R public gh-public/kovan
       - name: Build App for okt
         env:
           OIDC_ISSUER: https://nft-login.chriamue.net/okt/
-          OIDC_CLIENT_ID: "0xBa4e569A5156C00348B89653968c2C294f80E151"
-          OIDC_REDIRECT_URI: https://nft-login.github.io/svelte-oidc/okt/
-          OIDC_POST_LOGOUT_REDIRECT_URI: https://nft-login.github.io/svelte-oidc/okt/
-        run: PUBLIC_URL=/svelte-oidc/okt npm run showcase:build && cp -R public gh-public/okt
+          OIDC_CLIENT_ID: "0xe13FB84e4e661Ba3b39B32Fd1E16FE71378F68cB"
+          OIDC_REDIRECT_URI: https://nft-login.github.io/nft-login-demo/okt/
+          OIDC_POST_LOGOUT_REDIRECT_URI: https://nft-login.github.io/nft-login-demo/okt/
+        run: PUBLIC_URL=/nft-login-demo/okt npm run showcase:build && cp -R public gh-public/okt
       - name: Build App for heco
         env:
           OIDC_ISSUER: https://nft-login.chriamue.net/heco/
           OIDC_CLIENT_ID: "0xBa4e569A5156C00348B89653968c2C294f80E151"
-          OIDC_REDIRECT_URI: https://nft-login.github.io/svelte-oidc/heco/
-          OIDC_POST_LOGOUT_REDIRECT_URI: https://nft-login.github.io/svelte-oidc/heco/
-        run: PUBLIC_URL=/svelte-oidc/heco npm run showcase:build && cp -R public gh-public/heco
+          OIDC_REDIRECT_URI: https://nft-login.github.io/nft-login-demo/heco/
+          OIDC_POST_LOGOUT_REDIRECT_URI: https://nft-login.github.io/nft-login-demo/heco/
+        run: PUBLIC_URL=/nft-login-demo/heco npm run showcase:build && cp -R public gh-public/heco
       - name: Build App for celo
         env:
           OIDC_ISSUER: https://nft-login.chriamue.net/celo/
           OIDC_CLIENT_ID: "0x846D8eC745482F09e0506E21354168f20Da95818"
-          OIDC_REDIRECT_URI: https://nft-login.github.io/svelte-oidc/celo/
-          OIDC_POST_LOGOUT_REDIRECT_URI: https://nft-login.github.io/svelte-oidc/celo/
-        run: PUBLIC_URL=/svelte-oidc/celo npm run showcase:build && cp -R public gh-public/celo
+          OIDC_REDIRECT_URI: https://nft-login.github.io/nft-login-demo/celo/
+          OIDC_POST_LOGOUT_REDIRECT_URI: https://nft-login.github.io/nft-login-demo/celo/
+        run: PUBLIC_URL=/nft-login-demo/celo npm run showcase:build && cp -R public gh-public/celo
 
       - name: Deploy App
         uses: peaceiris/actions-gh-pages@v3
