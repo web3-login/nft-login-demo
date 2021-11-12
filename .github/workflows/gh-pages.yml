@@ -27,7 +27,7 @@ jobs:
         env:
           CHAIN: "kovan"
           OIDC_ISSUER: https://nft-login.chriamue.net/kovan/
-          OIDC_CLIENT_ID: "0x420d2a6E87D87992EB01e5BFe762B3F437dBfD85"
+          OIDC_CLIENT_ID: "0x846D8eC745482F09e0506E21354168f20Da95818"
           OIDC_REDIRECT_URI: https://nft-login.github.io/nft-login-demo/kovan/
           OIDC_POST_LOGOUT_REDIRECT_URI: https://nft-login.github.io/nft-login-demo/kovan/
         run: PUBLIC_URL=/nft-login-demo/kovan npm run showcase:build && cp -R public gh-public/kovan
@@ -35,7 +35,7 @@ jobs:
         env:
           CHAIN: "okt"
           OIDC_ISSUER: https://nft-login.chriamue.net/okt/
-          OIDC_CLIENT_ID: "0xe13FB84e4e661Ba3b39B32Fd1E16FE71378F68cB"
+          OIDC_CLIENT_ID: "0x8BEA859cE5213D47e1269616406DbD8de1d00e7D"
           OIDC_REDIRECT_URI: https://nft-login.github.io/nft-login-demo/okt/
           OIDC_POST_LOGOUT_REDIRECT_URI: https://nft-login.github.io/nft-login-demo/okt/
         run: PUBLIC_URL=/nft-login-demo/okt npm run showcase:build && cp -R public gh-public/okt
@@ -43,7 +43,7 @@ jobs:
         env:
           CHAIN: "heco"
           OIDC_ISSUER: https://nft-login.chriamue.net/heco/
-          OIDC_CLIENT_ID: "0xBa4e569A5156C00348B89653968c2C294f80E151"
+          OIDC_CLIENT_ID: "0xf141C38096539185efbca485Eb858Bd274a6651c"
           OIDC_REDIRECT_URI: https://nft-login.github.io/nft-login-demo/heco/
           OIDC_POST_LOGOUT_REDIRECT_URI: https://nft-login.github.io/nft-login-demo/heco/
         run: PUBLIC_URL=/nft-login-demo/heco npm run showcase:build && cp -R public gh-public/heco
