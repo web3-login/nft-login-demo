@@ -6,18 +6,15 @@
 		OidcContext,
 		LoginButton,
 		LogoutButton,
+		NFTButton,
 		RefreshTokenButton,
 		authError,
 		idToken,
 		accessToken,
 		isAuthenticated,
 		isLoading,
-		login,
-		logout,
-		refreshToken,
 		userInfo,
 	} from './components/components.module.js';
-	console.log(isAuthenticated);
 
 	let show_game;
 
@@ -40,6 +37,7 @@
 		<LoginButton>Login</LoginButton>
 		<LogoutButton>Logout</LogoutButton>
 		<RefreshTokenButton>refreshToken</RefreshTokenButton>
+		<NFTButton>Get NFT for Login</NFTButton>
 
 		{#if show_game}
 			<div>

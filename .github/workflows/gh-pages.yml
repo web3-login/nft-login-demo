@@ -7,6 +7,7 @@ jobs:
     name: Web App
     runs-on: ubuntu-latest
     env:
+      CHAIN: "kovan"
       OIDC_ISSUER: https://nft-login.chriamue.net
       OIDC_CLIENT_ID: "0x420d2a6E87D87992EB01e5BFe762B3F437dBfD85"
       OIDC_REDIRECT_URI: https://nft-login.github.io/nft-login-demo/
@@ -16,7 +17,7 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: "14.x"
+          node-version: "16.x"
       - name: Install node dependencies
         run: npm install
       - name: Build App
@@ -24,6 +25,7 @@ jobs:
 
       - name: Build App for kovan
         env:
+          CHAIN: "kovan"
           OIDC_ISSUER: https://nft-login.chriamue.net/kovan/
           OIDC_CLIENT_ID: "0x420d2a6E87D87992EB01e5BFe762B3F437dBfD85"
           OIDC_REDIRECT_URI: https://nft-login.github.io/nft-login-demo/kovan/
@@ -31,6 +33,7 @@ jobs:
         run: PUBLIC_URL=/nft-login-demo/kovan npm run showcase:build && cp -R public gh-public/kovan
       - name: Build App for okt
         env:
+          CHAIN: "okt"
           OIDC_ISSUER: https://nft-login.chriamue.net/okt/
           OIDC_CLIENT_ID: "0xe13FB84e4e661Ba3b39B32Fd1E16FE71378F68cB"
           OIDC_REDIRECT_URI: https://nft-login.github.io/nft-login-demo/okt/
@@ -38,6 +41,7 @@ jobs:
         run: PUBLIC_URL=/nft-login-demo/okt npm run showcase:build && cp -R public gh-public/okt
       - name: Build App for heco
         env:
+          CHAIN: "heco"
           OIDC_ISSUER: https://nft-login.chriamue.net/heco/
           OIDC_CLIENT_ID: "0xBa4e569A5156C00348B89653968c2C294f80E151"
           OIDC_REDIRECT_URI: https://nft-login.github.io/nft-login-demo/heco/
@@ -45,6 +49,7 @@ jobs:
         run: PUBLIC_URL=/nft-login-demo/heco npm run showcase:build && cp -R public gh-public/heco
       - name: Build App for celo
         env:
+          CHAIN: "celo"
           OIDC_ISSUER: https://nft-login.chriamue.net/celo/
           OIDC_CLIENT_ID: "0x846D8eC745482F09e0506E21354168f20Da95818"
           OIDC_REDIRECT_URI: https://nft-login.github.io/nft-login-demo/celo/

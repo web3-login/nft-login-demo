@@ -15,6 +15,7 @@ export default {
 	output:  { sourcemap: true,	format: 'iife',	name: 'app', file: 'public/bundle.js'  },
 	plugins: [
 		replace({
+			'process.env.CHAIN': process.env.CHAIN || "",
 			'process.env.OIDC_ISSUER': process.env.OIDC_ISSUER || "https://nft-login.chriamue.net",
 			'process.env.OIDC_CLIENT_ID': process.env.OIDC_CLIENT_ID || "0x420d2a6E87D87992EB01e5BFe762B3F437dBfD85",
 			'process.env.OIDC_REDIRECT_URI': process.env.OIDC_REDIRECT_URI ||  defaultRedirectUri,
