@@ -2761,7 +2761,7 @@ ArduinoÂ® Light Theme - Stefania Mellai <s.mellai@arduino.cc>
     	};
     }
 
-    // (31:1) <OidcContext   issuer="https://nft-login.chriamue.net/heco/"   client_id="0xBa4e569A5156C00348B89653968c2C294f80E151"   redirect_uri="https://nft-login.github.io/nft-login-demo/heco/"   post_logout_redirect_uri="https://nft-login.github.io/nft-login-demo/heco/"  >
+    // (31:1) <OidcContext   issuer="https://nft-login.chriamue.net/heco/"   client_id="0xf141C38096539185efbca485Eb858Bd274a6651c"   redirect_uri="https://nft-login.github.io/nft-login-demo/heco/"   post_logout_redirect_uri="https://nft-login.github.io/nft-login-demo/heco/"  >
     function create_default_slot(ctx) {
     	let loginbutton;
     	let t0;
@@ -3040,7 +3040,7 @@ ArduinoÂ® Light Theme - Stefania Mellai <s.mellai@arduino.cc>
     	oidccontext = new OidcContext({
     			props: {
     				issuer: "https://nft-login.chriamue.net/heco/",
-    				client_id: "0xBa4e569A5156C00348B89653968c2C294f80E151",
+    				client_id: "0xf141C38096539185efbca485Eb858Bd274a6651c",
     				redirect_uri: "https://nft-login.github.io/nft-login-demo/heco/",
     				post_logout_redirect_uri: "https://nft-login.github.io/nft-login-demo/heco/",
     				$$slots: { default: [create_default_slot] },
