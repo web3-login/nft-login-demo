@@ -55,6 +55,14 @@ jobs:
           OIDC_REDIRECT_URI: https://nft-login.github.io/nft-login-demo/celo/
           OIDC_POST_LOGOUT_REDIRECT_URI: https://nft-login.github.io/nft-login-demo/celo/
         run: PUBLIC_URL=/nft-login-demo/celo npm run showcase:build && cp -R public gh-public/celo
+      - name: Build App for polygon
+        env:
+          CHAIN: "polygon"
+          OIDC_ISSUER: https://nft-login.net/polygon/
+          OIDC_CLIENT_ID: "0x846D8eC745482F09e0506E21354168f20Da95818"
+          OIDC_REDIRECT_URI: https://nft-login.github.io/nft-login-demo/polygon/
+          OIDC_POST_LOGOUT_REDIRECT_URI: https://nft-login.github.io/nft-login-demo/polygon/
+        run: PUBLIC_URL=/nft-login-demo/polygon npm run showcase:build && cp -R public gh-public/polygon
 
       - name: Deploy App
         uses: peaceiris/actions-gh-pages@v3
