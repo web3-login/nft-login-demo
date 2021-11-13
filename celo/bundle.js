@@ -2761,7 +2761,7 @@ ArduinoÂ® Light Theme - Stefania Mellai <s.mellai@arduino.cc>
     	};
     }
 
-    // (31:1) <OidcContext   issuer="https://nft-login.chriamue.net/celo/"   client_id="0x846D8eC745482F09e0506E21354168f20Da95818"   redirect_uri="https://nft-login.github.io/nft-login-demo/celo/"   post_logout_redirect_uri="https://nft-login.github.io/nft-login-demo/celo/"  >
+    // (31:1) <OidcContext   issuer="https://nft-login.net/celo/"   client_id="0x846D8eC745482F09e0506E21354168f20Da95818"   redirect_uri="https://nft-login.github.io/nft-login-demo/celo/"   post_logout_redirect_uri="https://nft-login.github.io/nft-login-demo/celo/"  >
     function create_default_slot(ctx) {
     	let loginbutton;
     	let t0;
@@ -3039,7 +3039,7 @@ ArduinoÂ® Light Theme - Stefania Mellai <s.mellai@arduino.cc>
 
     	oidccontext = new OidcContext({
     			props: {
-    				issuer: "https://nft-login.chriamue.net/celo/",
+    				issuer: "https://nft-login.net/celo/",
     				client_id: "0x846D8eC745482F09e0506E21354168f20Da95818",
     				redirect_uri: "https://nft-login.github.io/nft-login-demo/celo/",
     				post_logout_redirect_uri: "https://nft-login.github.io/nft-login-demo/celo/",
