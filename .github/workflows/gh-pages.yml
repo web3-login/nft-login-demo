@@ -63,6 +63,14 @@ jobs:
           OIDC_REDIRECT_URI: https://nft-login.github.io/nft-login-demo/polygon/
           OIDC_POST_LOGOUT_REDIRECT_URI: https://nft-login.github.io/nft-login-demo/polygon/
         run: PUBLIC_URL=/nft-login-demo/polygon npm run showcase:build && cp -R public gh-public/polygon
+      - name: Build App for metis
+        env:
+          CHAIN: "metis"
+          OIDC_ISSUER: https://nft-login.net/metis/
+          OIDC_CLIENT_ID: "0x846D8eC745482F09e0506E21354168f20Da95818"
+          OIDC_REDIRECT_URI: https://nft-login.github.io/nft-login-demo/metis/
+          OIDC_POST_LOGOUT_REDIRECT_URI: https://nft-login.github.io/nft-login-demo/metis/
+        run: PUBLIC_URL=/nft-login-demo/metis npm run showcase:build && cp -R public gh-public/metis
 
       - name: Deploy App
         uses: peaceiris/actions-gh-pages@v3
