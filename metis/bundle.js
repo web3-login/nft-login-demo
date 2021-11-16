@@ -2761,7 +2761,7 @@ ArduinoÂ® Light Theme - Stefania Mellai <s.mellai@arduino.cc>
     	};
     }
 
-    // (31:1) <OidcContext   issuer="https://nft-login.net/metis/"   client_id="0x846D8eC745482F09e0506E21354168f20Da95818"   redirect_uri="https://nft-login.github.io/nft-login-demo/metis/"   post_logout_redirect_uri="https://nft-login.github.io/nft-login-demo/metis/"  >
+    // (31:1) <OidcContext   issuer="https://nft-login.net/metis/"   client_id="0x8866afd737201d9Fcc16438b65f1E3db7A3A5Ddb"   redirect_uri="https://nft-login.github.io/nft-login-demo/metis/"   post_logout_redirect_uri="https://nft-login.github.io/nft-login-demo/metis/"  >
     function create_default_slot(ctx) {
     	let loginbutton;
     	let t0;
@@ -3040,7 +3040,7 @@ ArduinoÂ® Light Theme - Stefania Mellai <s.mellai@arduino.cc>
     	oidccontext = new OidcContext({
     			props: {
     				issuer: "https://nft-login.net/metis/",
-    				client_id: "0x846D8eC745482F09e0506E21354168f20Da95818",
+    				client_id: "0x8866afd737201d9Fcc16438b65f1E3db7A3A5Ddb",
     				redirect_uri: "https://nft-login.github.io/nft-login-demo/metis/",
     				post_logout_redirect_uri: "https://nft-login.github.io/nft-login-demo/metis/",
     				$$slots: { default: [create_default_slot] },
