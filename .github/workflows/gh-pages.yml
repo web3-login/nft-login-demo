@@ -27,7 +27,7 @@ jobs:
         env:
           CHAIN: "kovan"
           OIDC_ISSUER: https://nft-login.net/kovan/
-          OIDC_CLIENT_ID: "0x846D8eC745482F09e0506E21354168f20Da95818"
+          OIDC_CLIENT_ID: "0x3B8270447b913d0b935e09d1C2daEc3F5CDD968f"
           OIDC_REDIRECT_URI: https://nft-login.github.io/nft-login-demo/kovan/
           OIDC_POST_LOGOUT_REDIRECT_URI: https://nft-login.github.io/nft-login-demo/kovan/
         run: PUBLIC_URL=/nft-login-demo/kovan npm run showcase:build && cp -R public gh-public/kovan
@@ -35,7 +35,7 @@ jobs:
         env:
           CHAIN: "okt"
           OIDC_ISSUER: https://nft-login.net/okt/
-          OIDC_CLIENT_ID: "0x8BEA859cE5213D47e1269616406DbD8de1d00e7D"
+          OIDC_CLIENT_ID: "0xf0263c1D56A167cDCF72086071f96CbB8a077AE9"
           OIDC_REDIRECT_URI: https://nft-login.github.io/nft-login-demo/okt/
           OIDC_POST_LOGOUT_REDIRECT_URI: https://nft-login.github.io/nft-login-demo/okt/
         run: PUBLIC_URL=/nft-login-demo/okt npm run showcase:build && cp -R public gh-public/okt
@@ -43,7 +43,7 @@ jobs:
         env:
           CHAIN: "heco"
           OIDC_ISSUER: https://nft-login.net/heco/
-          OIDC_CLIENT_ID: "0xf141C38096539185efbca485Eb858Bd274a6651c"
+          OIDC_CLIENT_ID: "0xa0d4E5CdD89330ef9d0d1071247909882f0562eA"
           OIDC_REDIRECT_URI: https://nft-login.github.io/nft-login-demo/heco/
           OIDC_POST_LOGOUT_REDIRECT_URI: https://nft-login.github.io/nft-login-demo/heco/
         run: PUBLIC_URL=/nft-login-demo/heco npm run showcase:build && cp -R public gh-public/heco
@@ -51,7 +51,7 @@ jobs:
         env:
           CHAIN: "celo"
           OIDC_ISSUER: https://nft-login.net/celo/
-          OIDC_CLIENT_ID: "0x846D8eC745482F09e0506E21354168f20Da95818"
+          OIDC_CLIENT_ID: "0x51320F31d30c56c8107D82b4C67C5EdDfCa88bc2"
           OIDC_REDIRECT_URI: https://nft-login.github.io/nft-login-demo/celo/
           OIDC_POST_LOGOUT_REDIRECT_URI: https://nft-login.github.io/nft-login-demo/celo/
         run: PUBLIC_URL=/nft-login-demo/celo npm run showcase:build && cp -R public gh-public/celo
@@ -59,7 +59,7 @@ jobs:
         env:
           CHAIN: "polygon"
           OIDC_ISSUER: https://nft-login.net/polygon/
-          OIDC_CLIENT_ID: "0x846D8eC745482F09e0506E21354168f20Da95818"
+          OIDC_CLIENT_ID: "0x8866afd737201d9Fcc16438b65f1E3db7A3A5Ddb"
           OIDC_REDIRECT_URI: https://nft-login.github.io/nft-login-demo/polygon/
           OIDC_POST_LOGOUT_REDIRECT_URI: https://nft-login.github.io/nft-login-demo/polygon/
         run: PUBLIC_URL=/nft-login-demo/polygon npm run showcase:build && cp -R public gh-public/polygon
@@ -67,7 +67,7 @@ jobs:
         env:
           CHAIN: "metis"
           OIDC_ISSUER: https://nft-login.net/metis/
-          OIDC_CLIENT_ID: "0x846D8eC745482F09e0506E21354168f20Da95818"
+          OIDC_CLIENT_ID: "0x8866afd737201d9Fcc16438b65f1E3db7A3A5Ddb"
           OIDC_REDIRECT_URI: https://nft-login.github.io/nft-login-demo/metis/
           OIDC_POST_LOGOUT_REDIRECT_URI: https://nft-login.github.io/nft-login-demo/metis/
         run: PUBLIC_URL=/nft-login-demo/metis npm run showcase:build && cp -R public gh-public/metis
