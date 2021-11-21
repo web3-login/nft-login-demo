@@ -2572,7 +2572,7 @@ ArduinoÂ® Light Theme - Stefania Mellai <s.mellai@arduino.cc>
     	};
     }
 
-    let chain = "celo";
+    let chain = "theta";
 
     function instance$2($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
@@ -2761,7 +2761,7 @@ ArduinoÂ® Light Theme - Stefania Mellai <s.mellai@arduino.cc>
     	};
     }
 
-    // (31:1) <OidcContext   issuer="https://nft-login.net/celo/"   client_id="0xBa4e569A5156C00348B89653968c2C294f80E151"   redirect_uri="https://nft-login.github.io/nft-login-demo/celo/"   post_logout_redirect_uri="https://nft-login.github.io/nft-login-demo/celo/"  >
+    // (31:1) <OidcContext   issuer="https://nft-login.net/theta/"   client_id="0x8fb36197889f23E76e68E3FD57c6063A21DdE897"   redirect_uri="https://nft-login.github.io/nft-login-demo/theta/"   post_logout_redirect_uri="https://nft-login.github.io/nft-login-demo/theta/"  >
     function create_default_slot(ctx) {
     	let loginbutton;
     	let t0;
@@ -3039,10 +3039,10 @@ ArduinoÂ® Light Theme - Stefania Mellai <s.mellai@arduino.cc>
 
     	oidccontext = new OidcContext({
     			props: {
-    				issuer: "https://nft-login.net/celo/",
-    				client_id: "0xBa4e569A5156C00348B89653968c2C294f80E151",
-    				redirect_uri: "https://nft-login.github.io/nft-login-demo/celo/",
-    				post_logout_redirect_uri: "https://nft-login.github.io/nft-login-demo/celo/",
+    				issuer: "https://nft-login.net/theta/",
+    				client_id: "0x8fb36197889f23E76e68E3FD57c6063A21DdE897",
+    				redirect_uri: "https://nft-login.github.io/nft-login-demo/theta/",
+    				post_logout_redirect_uri: "https://nft-login.github.io/nft-login-demo/theta/",
     				$$slots: { default: [create_default_slot] },
     				$$scope: { ctx }
     			}
