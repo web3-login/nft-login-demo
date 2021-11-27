@@ -90,6 +90,15 @@ jobs:
           OIDC_POST_LOGOUT_REDIRECT_URI: https://nft-login.github.io/nft-login-demo/avax/
         run: PUBLIC_URL=/nft-login-demo/avax npm run showcase:build && cp -R public gh-public/avax
 
+      - name: Build App for binance
+        env:
+          CHAIN: "binance"
+          OIDC_ISSUER: https://nft-login.net/binance/
+          OIDC_CLIENT_ID: "0x886B6781CD7dF75d8440Aba84216b2671AEFf9A4"
+          OIDC_REDIRECT_URI: https://nft-login.github.io/nft-login-demo/binance/
+          OIDC_POST_LOGOUT_REDIRECT_URI: https://nft-login.github.io/nft-login-demo/binance/
+        run: PUBLIC_URL=/nft-login-demo/binance npm run showcase:build && cp -R public gh-public/binance
+
       - name: Deploy App
         uses: peaceiris/actions-gh-pages@v3
         with:
