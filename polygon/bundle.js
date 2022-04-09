@@ -2572,11 +2572,10 @@ ArduinoÂ® Light Theme - Stefania Mellai <s.mellai@arduino.cc>
     	};
     }
 
-    let chain = "polygon";
+    let marketplace = "https://web3-login.net/nft-market";
 
     function instance$2($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
-    	let marketplace = "https://nft-login.github.io/nft-login-marketplace/" + chain;
 
     	const open = () => {
     		window.open(marketplace, "_blank");
