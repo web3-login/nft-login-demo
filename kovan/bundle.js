@@ -2761,7 +2761,7 @@ ArduinoÂ® Light Theme - Stefania Mellai <s.mellai@arduino.cc>
     	};
     }
 
-    // (31:1) <OidcContext   issuer="https://nft-login.net/kovan/"   client_id="0x3B8270447b913d0b935e09d1C2daEc3F5CDD968f"   redirect_uri="https://nft-login.github.io/nft-login-demo/kovan/"   post_logout_redirect_uri="https://nft-login.github.io/nft-login-demo/kovan/"  >
+    // (31:1) <OidcContext   issuer="https://oidc.web3-login.net/kovan"   client_id="0x3B8270447b913d0b935e09d1C2daEc3F5CDD968f"   redirect_uri="https://web3-login.net/nft-login-demo/kovan/"   post_logout_redirect_uri="https://web3-login.net/nft-login-demo/kovan/"  >
     function create_default_slot(ctx) {
     	let loginbutton;
     	let t0;
@@ -3039,10 +3039,10 @@ ArduinoÂ® Light Theme - Stefania Mellai <s.mellai@arduino.cc>
 
     	oidccontext = new OidcContext({
     			props: {
-    				issuer: "https://nft-login.net/kovan/",
+    				issuer: "https://oidc.web3-login.net/kovan",
     				client_id: "0x3B8270447b913d0b935e09d1C2daEc3F5CDD968f",
-    				redirect_uri: "https://nft-login.github.io/nft-login-demo/kovan/",
-    				post_logout_redirect_uri: "https://nft-login.github.io/nft-login-demo/kovan/",
+    				redirect_uri: "https://web3-login.net/nft-login-demo/kovan/",
+    				post_logout_redirect_uri: "https://web3-login.net/nft-login-demo/kovan/",
     				$$slots: { default: [create_default_slot] },
     				$$scope: { ctx }
     			}
