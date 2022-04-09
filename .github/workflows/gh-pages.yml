@@ -8,10 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     env:
       CHAIN: "kovan"
-      OIDC_ISSUER: https://nft-login.net
-      OIDC_CLIENT_ID: "0x420d2a6E87D87992EB01e5BFe762B3F437dBfD85"
-      OIDC_REDIRECT_URI: https://nft-login.github.io/nft-login-demo/
-      OIDC_POST_LOGOUT_REDIRECT_URI: https://nft-login.github.io/nft-login-demo/
+      OIDC_ISSUER: https://oidc.web3-login.net/kovan
+      OIDC_CLIENT_ID: "0x3B8270447b913d0b935e09d1C2daEc3F5CDD968f"
+      OIDC_REDIRECT_URI: https://web3-login.net/nft-login-demo/
+      OIDC_POST_LOGOUT_REDIRECT_URI: https://web3-login.net/nft-login-demo/
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js
@@ -26,10 +26,10 @@ jobs:
       - name: Build App for kovan
         env:
           CHAIN: "kovan"
-          OIDC_ISSUER: https://nft-login.net/kovan/
+          OIDC_ISSUER: https://oidc.web3-login.net/kovan
           OIDC_CLIENT_ID: "0x3B8270447b913d0b935e09d1C2daEc3F5CDD968f"
-          OIDC_REDIRECT_URI: https://nft-login.github.io/nft-login-demo/kovan/
-          OIDC_POST_LOGOUT_REDIRECT_URI: https://nft-login.github.io/nft-login-demo/kovan/
+          OIDC_REDIRECT_URI: https://web3-login.net/nft-login-demo/kovan/
+          OIDC_POST_LOGOUT_REDIRECT_URI: https://web3-login.net/nft-login-demo/kovan/
         run: PUBLIC_URL=/nft-login-demo/kovan npm run showcase:build && cp -R public gh-public/kovan
       - name: Build App for okt
         env:
