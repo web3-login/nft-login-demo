@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       CHAIN: "kovan"
-      OIDC_ISSUER: https://oidc.web3-login.net/kovan
+      OIDC_ISSUER: https://oidc.web3-login.net
       OIDC_CLIENT_ID: "0x3B8270447b913d0b935e09d1C2daEc3F5CDD968f"
       OIDC_REDIRECT_URI: https://web3-login.net/nft-login-demo/
       OIDC_POST_LOGOUT_REDIRECT_URI: https://web3-login.net/nft-login-demo/
