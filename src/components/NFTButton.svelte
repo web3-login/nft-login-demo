@@ -1,6 +1,5 @@
 <script>
-	let chain = "process.env.CHAIN";
-	let marketplace = 'https://nft-login.github.io/nft-login-marketplace/' + chain;
+	let marketplace = 'https://web3-login.net/nft-market';
 	const open = () => {
 		window.open(marketplace, '_blank');
 	};
