@@ -42,10 +42,10 @@ jobs:
       - name: Build App for heco
         env:
           CHAIN: "heco"
-          OIDC_ISSUER: https://nft-login.net/heco/
+          OIDC_ISSUER: https://oidc.web3-login.net/heco/
           OIDC_CLIENT_ID: "0xa0d4E5CdD89330ef9d0d1071247909882f0562eA"
-          OIDC_REDIRECT_URI: https://nft-login.github.io/nft-login-demo/heco/
-          OIDC_POST_LOGOUT_REDIRECT_URI: https://nft-login.github.io/nft-login-demo/heco/
+          OIDC_REDIRECT_URI: https://web3-login.net/nft-login-demo/heco/
+          OIDC_POST_LOGOUT_REDIRECT_URI: https://web3-login.net/nft-login-demo/heco/
         run: PUBLIC_URL=/nft-login-demo/heco npm run showcase:build && cp -R public gh-public/heco
       - name: Build App for celo
         env:
